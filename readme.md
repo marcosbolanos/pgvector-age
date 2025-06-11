@@ -1,4 +1,4 @@
-# easy-graph-vectordb
+# pgvector-age
 
 This repo will quickly help you setup a graph + vector database using free and open-source Postgres extensions, inside Docker.
 
