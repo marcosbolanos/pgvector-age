@@ -1,0 +1,26 @@
+# Check progress of all sessions
+python node_embedder.py progress
+
+# Check what failed in a specific session
+python node_embedder.py failures <session_id>
+
+# Reset failed nodes to retry them
+python node_embedder.py retry <session_id>
+
+# Start embedding (interactive if previous session exists)
+python node_embedder.py
+
+# Force resume last session (non-interactive)
+RESUME_SESSION=true python node_embedder.py
+
+# Force new session (non-interactive)
+NEW_SESSION=true python node_embedder.py
+
+# Check progress
+python node_embedder.py progress
+
+# If some nodes failed, check what went wrong
+python node_embedder.py failures embedding_session_1732473600
+
+# Reset failed nodes to try again
+python node_embedder.py retry embedding_session_1732473600
