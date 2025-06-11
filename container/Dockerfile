@@ -31,7 +31,7 @@ RUN echo "shared_preload_libraries='age'" >> /usr/share/postgresql/postgresql.co
 RUN echo "shared_preload_libraries = 'vector'" >> /usr/share/postgresql/postgresql.conf.sample
 
 # Set environment variables
-ENV POSTGRES_DB=easy-vector-graphdb
+ENV POSTGRES_DB=pgvector-age
 
 # Copy initialization SQL (runs automatically at runtime)
 COPY init.sql /docker-entrypoint-initdb.d/

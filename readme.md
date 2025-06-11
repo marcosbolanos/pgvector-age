@@ -1,6 +1,6 @@
 # easy-graph-vectordb
 
-This repo will quickly help you setup a graph + vector database using powerful and open-source Postgres extensions. It runs in Docker for portability.
+This repo will quickly help you setup a graph + vector database using free and open-source Postgres extensions, inside Docker.
 
 ## GitHub LFS
 
@@ -36,7 +36,7 @@ PORT=5431
 docker volume create db_volume
 
 # Build the image from the Dockerfile
-docker build -t pgvector-age .
+docker build -t pgvector-age ./container
 
 # Run container with networking and persistence
 docker run \
@@ -48,7 +48,7 @@ docker run \
   -v db_volume:/var/lib/postgresql/data:Z \
   pgvector-age
 
-# Quickly load the knowledge graph from the CSVs
+# Quickly load the a graph from the CSVs
 docker exec pgvector-age python3 csv_loader.py
 ```
 
